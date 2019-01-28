@@ -6,13 +6,13 @@
 /*   By: min-kim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/25 18:05:22 by min-kim           #+#    #+#             */
-/*   Updated: 2019/01/28 15:44:04 by min-kim          ###   ########.fr       */
+/*   Updated: 2019/01/28 18:25:52 by min-kim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		get_len(int n)
+static int		get_len(int n)
 {
 	int	i;
 
@@ -22,7 +22,7 @@ int		get_len(int n)
 	return (i);
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	char			*str;
 	int				len;
