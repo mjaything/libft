@@ -6,7 +6,7 @@
 /*   By: min-kim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 18:29:42 by min-kim           #+#    #+#             */
-/*   Updated: 2019/01/08 18:55:51 by min-kim          ###   ########.fr       */
+/*   Updated: 2019/01/28 19:37:47 by min-kim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int	i;
-	int	j;
-	int	k;
+	size_t	i;
+	size_t	j;
+	size_t	k;
 
 	i = 0;
 	if (*needle == '\0')

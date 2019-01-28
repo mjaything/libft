@@ -6,7 +6,7 @@
 /*   By: min-kim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/14 14:39:11 by min-kim           #+#    #+#             */
-/*   Updated: 2019/01/14 14:41:51 by min-kim          ###   ########.fr       */
+/*   Updated: 2019/01/28 19:36:42 by min-kim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int					i;
+	size_t				i;
 	unsigned const char	*s3;
 	unsigned const char	*s4;
 

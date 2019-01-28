@@ -6,7 +6,7 @@
 /*   By: min-kim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/25 14:29:56 by min-kim           #+#    #+#             */
-/*   Updated: 2019/01/25 14:30:28 by min-kim          ###   ########.fr       */
+/*   Updated: 2019/01/28 19:43:03 by min-kim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
-	char const	*t;
-	int			i;
+	char	*t;
+	int		i;
 
 	t = ft_strnew(ft_strlen(s));
 	i = 0;

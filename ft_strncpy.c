@@ -6,7 +6,7 @@
 /*   By: min-kim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 17:15:29 by min-kim           #+#    #+#             */
-/*   Updated: 2019/01/07 17:22:09 by min-kim          ###   ########.fr       */
+/*   Updated: 2019/01/28 19:37:00 by min-kim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (src[i] != '\0' && i < len)

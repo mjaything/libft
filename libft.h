@@ -6,7 +6,7 @@
 /*   By: min-kim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/28 18:17:46 by min-kim           #+#    #+#             */
-/*   Updated: 2019/01/28 19:17:04 by min-kim          ###   ########.fr       */
+/*   Updated: 2019/01/28 19:40:57 by min-kim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ typedef struct	s_list
 	void			*content;
 	size_t			content_size;
 	struct s_list	*next;
-}				t_list;i
+}				t_list;
 
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
@@ -58,7 +58,7 @@ char	*ft_strnew(size_t size);
 void	ft_strdel(char **as);
 void	ft_strclr(char *s);
 void	ft_striter(char *s, void (*f)(char*));
-void	ft_striteri(char *s,void (*f)(unsignedint, char *));
+void	ft_striteri(char *s,void (*f)(unsigned int, char *));
 char	*ft_strmap(char const *s, char (*f)(char));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int		ft_strequ(char const *s1, char const *s2);
@@ -82,7 +82,7 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void	ft_lstadd(t_list **alst, t_list *new);
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-int		islower(int c);
-int		isupper(int c);
+int		ft_islower(int c);
+int		ft_isupper(int c);
 
 #endif

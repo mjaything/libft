@@ -6,15 +6,15 @@
 /*   By: min-kim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 16:45:37 by min-kim           #+#    #+#             */
-/*   Updated: 2019/01/07 16:45:49 by min-kim          ###   ########.fr       */
+/*   Updated: 2019/01/28 21:05:36 by min-kim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	tolower(int c)
+int	ft_tolower(int c)
 {
-	if (isupper(c))
+	if (ft_isupper(c))
 		c += 32;
 	return (c);
 }

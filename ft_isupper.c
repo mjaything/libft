@@ -6,13 +6,13 @@
 /*   By: min-kim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 15:33:51 by min-kim           #+#    #+#             */
-/*   Updated: 2019/01/07 16:19:00 by min-kim          ###   ########.fr       */
+/*   Updated: 2019/01/28 20:45:33 by min-kim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-int	isupper(int c)
+int	ft_isupper(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		return (1);

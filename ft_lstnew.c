@@ -6,7 +6,7 @@
 /*   By: min-kim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/28 15:11:16 by min-kim           #+#    #+#             */
-/*   Updated: 2019/01/28 15:11:56 by min-kim          ###   ########.fr       */
+/*   Updated: 2019/01/28 20:25:09 by min-kim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,16 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 		return (NULL);
 	if (!content)
 	{
-		(*list).content = NULL;
-		(*list).content_size = 0;
+		(*new).content = NULL;
+		(*new).content_size = 0;
 	}
 	else
 	{
-		if (!((*list).content = malloc(content_size)))
+		if (!((*new).content = malloc(content_size)))
 			return (NULL);
-		ft_memcpy((*list).content, content, content_size);
-		(*list).content_size = content_size;
+		ft_memcpy((*new).content, content, content_size);
+		(*new).content_size = content_size;
 	}
-	(*list).next = NULL;
+	(*new).next = NULL;
 	return (new);
 }
