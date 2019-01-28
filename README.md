@@ -25,7 +25,7 @@ Re-written Standard C Library functions
 | atoi            | ft_putnbr             |
 | isalpha         | ft_putchar_fd         |
 | isdigit         | ft_putstr_fd          |
-| isalum          | ft_putendl_fd         |
+| isalnum         | ft_putendl_fd         |
 | isascii         | ft_putnbr_fd          |
 | isprint         | 
 | toupper         |
