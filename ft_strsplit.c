@@ -6,13 +6,13 @@
 /*   By: min-kim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/25 16:57:08 by min-kim           #+#    #+#             */
-/*   Updated: 2019/01/25 18:04:43 by min-kim          ###   ########.fr       */
+/*   Updated: 2019/01/28 18:35:03 by min-kim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		wordcount(char const *str, char c)
+static int		wordcount(char const *str, char c)
 {
 	int	count;
 	int	i;
@@ -31,7 +31,7 @@ int		wordcount(char const *str, char c)
 	return (count);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
 	int		i;
 	int		j;
