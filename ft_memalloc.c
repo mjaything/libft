@@ -6,7 +6,7 @@
 /*   By: min-kim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/15 14:07:39 by min-kim           #+#    #+#             */
-/*   Updated: 2019/01/15 14:07:47 by min-kim          ###   ########.fr       */
+/*   Updated: 2019/01/28 15:42:34 by min-kim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memalloc(size_t size)
 {
-	void    *ptr;
+	void	*ptr;
 
 	ptr = malloc(size);
 	if (ptr == NULL)
