@@ -6,7 +6,7 @@
 /*   By: min-kim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/25 18:05:22 by min-kim           #+#    #+#             */
-/*   Updated: 2019/01/28 18:25:52 by min-kim          ###   ########.fr       */
+/*   Updated: 2019/01/29 22:41:31 by min-kim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,34 +15,41 @@
 static int		get_len(int n)
 {
 	int	i;
+	int tmp;
 
-	i = 1;
-	while (n /= 10)
+	i = 0;
+	tmp = n;
+	if (tmp == 0)
+		return (1);
+	while (tmp)
+	{
+		tmp /= 10;
 		i++;
-	return (i);
+	}
+	return (n < 0 ? i + 1 : i);
 }
 
 char			*ft_itoa(int n)
 {
 	char			*str;
 	int				len;
-	unsigned int	m;
+	int				m;
 
 	len = get_len(n);
 	m = n;
-	if (n < 0)
+	str = ft_strnew(len);
+	if (!str)
+		return (0);
+	while (len)
 	{
-		m = -n;
-		len++;
+		len--;
+		if (n < 0)
+			str[len] = (-1) * (n % 10) + '0';
+		else
+			str[len] = (n % 10) + '0';
+		n /= 10;
 	}
-	if (!(str = ft_strnew(len)))
-		return (NULL);
-	while (m > 0)
-	{
-		str[--len] = m % 10 + '0';
-		m /= 10;
-	}
-	if (n < 0)
+	if (m < 0)
 		str[len] = '-';
 	return (str);
 }
