@@ -6,7 +6,7 @@
 /*   By: min-kim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 17:32:25 by min-kim           #+#    #+#             */
-/*   Updated: 2019/01/29 15:46:51 by min-kim          ###   ########.fr       */
+/*   Updated: 2019/01/29 19:39:27 by min-kim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ char	*ft_strchr(const char *s, int c)
 			return (NULL);
 		i++;
 	}
-	return ((char *)&s[i]);	
+	return ((char *)&s[i]);
 }
