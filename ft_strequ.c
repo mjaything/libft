@@ -6,7 +6,7 @@
 /*   By: min-kim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/25 14:37:38 by min-kim           #+#    #+#             */
-/*   Updated: 2019/01/25 14:37:46 by min-kim          ###   ########.fr       */
+/*   Updated: 2019/01/29 17:55:23 by min-kim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,8 @@
 
 int	ft_strequ(char const *s1, char const *s2)
 {
-	return (ft_strcmp(s1, s2) ? 0 : 1);
+	if (s1 && s2 && (ft_strcmp(s1, s2) == 0))
+		return (1);
+	else
+		return (0);
 }
