@@ -6,7 +6,7 @@
 /*   By: min-kim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/25 14:31:36 by min-kim           #+#    #+#             */
-/*   Updated: 2019/01/25 14:31:52 by min-kim          ###   ########.fr       */
+/*   Updated: 2019/01/29 17:42:44 by min-kim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,19 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*t;
 	int		i;
 
-	t = ft_strnew(ft_strlen(s));
-	i = 0;
-	while (s[i] != '\0')
+	if (s && f)
 	{
-		t[i] = f(i, s[i]);
-		i++;
+		t = ft_strnew(ft_strlen(s));
+		i = 0;
+		if (t)
+		{
+			while (s[i] != '\0')
+			{
+				t[i] = f(i, s[i]);
+				i++;
+			}
+			return (t);
+		}
 	}
-	return (t);
+	return (NULL);
 }
