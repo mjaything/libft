@@ -6,52 +6,68 @@
 /*   By: min-kim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/25 16:57:08 by min-kim           #+#    #+#             */
-/*   Updated: 2019/01/28 19:44:33 by min-kim          ###   ########.fr       */
+/*   Updated: 2019/01/29 21:26:55 by min-kim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		wordcount(char const *str, char c)
+static	size_t	wordcount(char const *s, char c)
 {
-	int	count;
-	int	i;
+	size_t	i;
+	size_t	count;
 
-	count = 0;
 	i = 0;
-	while (str[i] != '\0')
+	count = 0;
+	if (s)
 	{
-		while (str[i] == c)
-			i++;
-		if (str[i] != c && str[i] != '\0')
-			count++;
-		while (str[i] != c && str[i] != '\0')
-			i++;
+		while (s[i])
+		{
+			while (s[i] == c)
+				i++;
+			if (s[i])
+				count++;
+			while (s[i] && s[i] != c)
+				i++;
+		}
 	}
 	return (count);
+}
+
+static size_t	wordlength(char const *s, char c)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i] && s[i] != c)
+		i++;
+	return (i);
 }
 
 char			**ft_strsplit(char const *s, char c)
 {
 	int		i;
-	int		j;
-	int		k;
-	char	**t;
+	size_t	j;
+	size_t	k;
+	char	**arr;
 
-	i = 0;
-	j = 0;
-	if (!s || !(t = (char **)malloc(sizeof(*t) * (wordcount(s, c) + 1))))
-		return (NULL);
-	while (i < wordcount(s, c))
+	arr = (char **)malloc(sizeof(char *) * (wordcount(s, c) + 1));
+	if (arr && wordcount(s, c))
 	{
-		k = 0;
-		while (s[j] == c)
-			j++;
-		while (s[j] != c && s[j] != '\0')
-			t[i][k++] = s[j++];
-		t[i][k] = '\0';
-		i++;
+		i = 0;
+		j = 0;
+		while (s && j < wordcount(s, c) && s[i])
+		{
+			while (s[i] && s[i] == c)
+				i++;
+			k = wordlength((char *)(s + i), c);
+			if (!(arr[j] = ft_strnew(wordlength((char *)(s + i), c))))
+				return (0);
+			ft_strncpy(arr[j++], &s[i], k);
+			while (s[i] && s[i] != c)
+				i++;
+		}
+		arr[j] = 0;
 	}
-	t[i][k] = '\0';
-	return (t);
+	return (arr);
 }
