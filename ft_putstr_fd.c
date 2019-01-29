@@ -6,7 +6,7 @@
 /*   By: min-kim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/09 17:59:24 by min-kim           #+#    #+#             */
-/*   Updated: 2019/01/09 18:06:04 by min-kim          ###   ########.fr       */
+/*   Updated: 2019/01/29 18:48:08 by min-kim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_putstr_fd(char const *s, int fd)
 {
-	write(fd, s, ft_strlen(s));
+	if (s)
+		write(fd, s, ft_strlen(s));
 }
