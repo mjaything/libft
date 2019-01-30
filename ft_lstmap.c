@@ -6,7 +6,7 @@
 /*   By: min-kim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/28 15:07:40 by min-kim           #+#    #+#             */
-/*   Updated: 2019/01/30 21:53:06 by min-kim          ###   ########.fr       */
+/*   Updated: 2019/01/30 22:33:20 by min-kim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,18 @@
 
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	t_list	*fresh;
-	t_list	*tmp;
+	t_list	*new;
+	t_list	*iter;
 
-	tmp = (t_list *)malloc(sizeof(t_list));
-	fresh = (t_list *)malloc(sizeof(t_list));
-	tmp = NULL;
-	fresh = NULL;
-	if (!lst)
+	if (!lst || !(iter = ft_lstnew(NULL, 0)))
 		return (NULL);
-	tmp = f(lst);
-	fresh = tmp;
+	iter = f(lst);
+	new = iter;
 	while (lst->next)
 	{
 		lst = lst->next;
-		if (!(tmp->next = f(lst)))
-		{
-			free(tmp->next);
-			return (NULL);
-		}
-		tmp = tmp->next;
+		iter->next = f(lst);
+		iter = iter->next;
 	}
-	return (fresh);
+	return (new);
 }
