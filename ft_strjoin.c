@@ -6,7 +6,7 @@
 /*   By: min-kim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/25 14:43:43 by min-kim           #+#    #+#             */
-/*   Updated: 2019/01/25 14:45:01 by min-kim          ###   ########.fr       */
+/*   Updated: 2019/01/30 18:26:09 by min-kim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
 
-	if (!s1)
+	if (!s1 || !s2)
 		return (NULL);
 	str = ft_strnew(ft_strlen(s1) + ft_strlen(s2));
 	if (!str)
