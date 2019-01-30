@@ -6,7 +6,7 @@
 /*   By: min-kim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/28 15:08:47 by min-kim           #+#    #+#             */
-/*   Updated: 2019/01/28 15:08:55 by min-kim          ###   ########.fr       */
+/*   Updated: 2019/01/30 21:49:22 by min-kim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	while (lst != '\0')
+	while (lst)
 	{
 		f(lst);
-		lst = (*lst).next;
+		lst = lst->next;
 	}
 }

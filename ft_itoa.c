@@ -6,7 +6,7 @@
 /*   By: min-kim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/25 18:05:22 by min-kim           #+#    #+#             */
-/*   Updated: 2019/01/29 22:41:31 by min-kim          ###   ########.fr       */
+/*   Updated: 2019/01/30 20:23:46 by min-kim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char			*ft_itoa(int n)
 	m = n;
 	str = ft_strnew(len);
 	if (!str)
-		return (0);
+		return (NULL);
 	while (len)
 	{
 		len--;

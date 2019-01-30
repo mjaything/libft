@@ -6,7 +6,7 @@
 /*   By: min-kim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/28 15:07:40 by min-kim           #+#    #+#             */
-/*   Updated: 2019/01/28 22:36:31 by min-kim          ###   ########.fr       */
+/*   Updated: 2019/01/30 21:53:06 by min-kim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,15 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 		return (NULL);
 	tmp = f(lst);
 	fresh = tmp;
-	while ((*lst).next)
+	while (lst->next)
 	{
-		lst = (*lst).next;
-		if (!((*tmp).next = f(lst)))
+		lst = lst->next;
+		if (!(tmp->next = f(lst)))
 		{
-			free((*tmp).next);
+			free(tmp->next);
 			return (NULL);
 		}
-		tmp = (*tmp).next;
+		tmp = tmp->next;
 	}
 	return (fresh);
 }
