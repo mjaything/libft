@@ -6,7 +6,7 @@
 /*   By: min-kim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/25 16:57:08 by min-kim           #+#    #+#             */
-/*   Updated: 2019/01/29 21:26:55 by min-kim          ###   ########.fr       */
+/*   Updated: 2019/01/30 20:12:45 by min-kim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ char			**ft_strsplit(char const *s, char c)
 			while (s[i] && s[i] != c)
 				i++;
 		}
-		arr[j] = 0;
+		arr[j] = NULL;
 	}
 	return (arr);
 }
