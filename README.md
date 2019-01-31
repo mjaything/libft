@@ -3,8 +3,8 @@ Re-written Standard C Library functions
 
 | Libc functions  | Additional functions  | Bonus functions | Personal functions |
 | :-------------: | :------------------:  | :--------:      | :----------------: |
-| memset          | ft_memalloc           | ft_lstnew       |
-| bzero           | ft_memdel             | ft_lstdelone    |
+| memset          | ft_memalloc           | ft_lstnew       | ft_islower         |
+| bzero           | ft_memdel             | ft_lstdelone    | ft_isupper         |
 | memcpy          | ft_strnew             | ft_lstdel       |
 | memccpy         | ft_strdel             | ft_lstadd       |
 | memmove         | ft_strclr             | ft_lstiter      |
