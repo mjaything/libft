@@ -1,6 +1,8 @@
 # libft
 Re-written Standard C Library functions
 
+Mark: 123/100
+
 | Libc functions  | Additional functions  | Bonus functions | Personal functions |
 | :-------------: | :------------------:  | :--------:      | :----------------: |
 | memset          | ft_memalloc           | ft_lstnew       | ft_islower         |
