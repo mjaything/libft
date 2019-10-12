@@ -11,6 +11,6 @@ char*	ft_strnjoin(char const *s1, char const *s2, int n)
 	if (!str)
 		return (NULL);
 	ft_strcpy(str, s1);
-	ft_strncat(str, s2);
+	ft_strncat(str, s2, n);
 	return (str);
 }
