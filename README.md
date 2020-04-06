@@ -1,7 +1,5 @@
-# libft
+# standard-c-library
 Re-written Standard C Library functions
-
-Mark: 123/100
 
 | Libc functions  | Additional functions  | Bonus functions | Personal functions |
 | :-------------: | :------------------:  | :--------:      | :----------------: |
