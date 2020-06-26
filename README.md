@@ -1,5 +1,5 @@
-# standard-c-library
-Re-written Standard C Library functions
+# Standard C Library Reproduction
+The project rewrites Standard C Library functions only using write, free, and malloc, to gain an understanding of how C works on a fundamental level by reinventing the wheel.
 
 | Libc functions  | Additional functions  | Bonus functions | Personal functions |
 | :-------------: | :------------------:  | :--------:      | :----------------: |
